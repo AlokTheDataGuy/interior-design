@@ -57,7 +57,7 @@ export default function Hero() {
           className="m-0 text-ink-soft leading-[1.55] max-w-[52ch]"
           style={{ fontSize: "clamp(15px, 1.15vw, 18px)" }}
         >
-          A multi-disciplinary practice shaping residences, hotels, workplaces and cultural spaces — where material, light and proportion are treated as the brief, not the finish.
+          A multi-disciplinary studio shaping residences, hotels, workplaces and cultural spaces — where material, light and proportion are treated as the brief, not the finish.
         </p>
         <div className="flex flex-wrap gap-3">
           <a href="#work" className="btn btn-ghost">

@@ -14,7 +14,7 @@ export default function Team() {
           A small team. A <em>long</em> view.
         </h2>
         <p className="text-ink-soft text-[16px] max-w-[50ch] m-0 mb-10">
-          {`Atelier Nord is led by a tight team of architects, designers and makers. We keep the practice deliberately small — fewer projects, more attention, longer relationships with the people who commission us.`}
+          {`Atelier Nord is led by a tight team of architects, designers and makers. We keep the studio deliberately small — fewer projects, more attention, longer relationships with the people who commission us.`}
         </p>
         <div className="grid grid-cols-2 gap-x-6 gap-y-7">
           {team.map((p) => (
