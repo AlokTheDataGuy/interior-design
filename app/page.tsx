@@ -79,53 +79,62 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* ───────────────────────── HERO ───────────────────────── */}
-      <section className="relative min-h-screen pt-20 sm:pt-28 pb-20 px-6 md:px-10">
-        {/* vertical tagline in margin */}
+      {/* ───────────────────────── HERO — MOBILE ───────────────────────── */}
+      <section className="sm:hidden relative h-screen overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1000&q=80"
+          alt="Interior studio"
+          fill
+          priority
+          className="object-cover sepia-[0.06] saturate-[1.08]"
+        />
+
+        {/* Gradient: subtle top, heavy bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink/90" />
+
+        {/* Top bar */}
+        <div className="absolute top-0 left-0 right-0 flex justify-between items-center px-6 pt-8 text-[10px] uppercase tracking-[0.28em] text-cream/55">
+          <span className="font-display italic text-base normal-case tracking-normal text-cream">InDesign</span>
+          <span>Bengaluru · Est. MMXIX</span>
+        </div>
+
+        {/* Bottom content */}
+        <div className="absolute bottom-0 left-0 right-0 px-6 pb-[88px]">
+          <p className="text-[9px] uppercase tracking-[0.3em] text-cream/45 mb-3">
+            ✦ Interior Studio, since 2019
+          </p>
+          <h1 className="font-display text-[19vw] leading-[0.85] tracking-[-0.04em] text-cream">
+            <span className="italic font-light">In</span><span className="italic font-light text-terracotta">Design</span>
+          </h1>
+          <div className="mt-5 border-t border-cream/15 pt-4">
+            <p className="text-sm text-cream/65 leading-relaxed max-w-[30ch]">
+              We design rooms the way poems are written —
+              <span className="italic text-terracotta"> deliberately,</span> and
+              with reverence for the space between.
+            </p>
+          </div>
+        </div>
+
+        {/* Scroll hint */}
+        <div className="absolute bottom-[72px] left-1/2 -translate-x-1/2 text-cream/30 text-xs tracking-widest">↓</div>
+      </section>
+
+      {/* ───────────────────────── HERO — DESKTOP ───────────────────────── */}
+      <section className="hidden sm:block relative min-h-screen pt-28 pb-20 px-6 md:px-10">
+        {/* vertical taglines */}
         <div className="hidden lg:block absolute left-6 top-1/2 -translate-y-1/2 vrule text-[11px] tracking-[0.3em] uppercase text-cocoa/70 reveal reveal-delay-1">
           A studio of interiors, objects & atmospheres — №&nbsp;001
         </div>
-
         <div className="hidden lg:block absolute right-6 top-1/2 -translate-y-1/2 vrule text-[11px] tracking-[0.3em] uppercase text-cocoa/70 reveal reveal-delay-1">
           Bengaluru
         </div>
 
-        {/* Mobile hero image — portrait, framed */}
-        <div className="sm:hidden mb-10 px-2">
-          <div
-            className="relative mx-auto w-[78vw] aspect-[3/4] rounded-[2px]"
-            style={{
-              boxShadow: "0 2px 0 0 #c8bfb0, 6px 8px 0 0 #b8ad9e, 0 24px 60px -8px rgba(30,22,14,.28), 0 8px 20px -4px rgba(30,22,14,.18)",
-            }}
-          >
-            {/* Cream mat border */}
-            <div className="absolute inset-0 rounded-[2px] border-[10px] border-[#f0ebe1] z-10 pointer-events-none" />
-            {/* Fine inner rule */}
-            <div className="absolute inset-[10px] rounded-[1px] border border-[#d4c9b8]/60 z-10 pointer-events-none" />
-            <Image
-              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1000&q=80"
-              alt="Interior studio"
-              fill
-              priority
-              className="object-cover rounded-[2px] sepia-[0.06] saturate-[1.08]"
-            />
-            {/* Studio label bottom-left */}
-            <span className="absolute bottom-[18px] left-[18px] z-20 text-[9px] uppercase tracking-[0.22em] text-cream/75"
-              style={{ textShadow: "0 1px 6px rgba(0,0,0,.4)" }}>
-              InDesign · Est. MMXIX
-            </span>
-          </div>
-        </div>
-
-        <div className="relative max-w-[1400px] mx-auto pt-0 sm:pt-12 md:pt-20">
-          {/* Overlapping headline composition */}
+        <div className="relative max-w-[1400px] mx-auto pt-12 md:pt-20">
           <div className="relative">
-            <h1 className="font-display text-[13vw] sm:text-[15vw] md:text-[14vw] leading-[0.85] tracking-[-0.04em] text-ink reveal pl-0 sm:pl-[5vw] md:pl-[10vw]">
+            <h1 className="font-display text-[15vw] md:text-[14vw] leading-[0.85] tracking-[-0.04em] text-ink reveal pl-[5vw] md:pl-[10vw]">
               <span className="inline-block -translate-y-[0.12em]">In</span><span className="italic font-light">D</span><span className="italic font-light text-terracotta">esign</span>
             </h1>
-
-            {/* Image overlapping the type */}
-            <div className="hidden sm:block absolute right-0 md:right-[8vw] top-[6vw] w-[36vw] md:w-[28vw] aspect-[3/4] z-[-1] reveal reveal-delay-2 img-hover">
+            <div className="absolute right-0 md:right-[8vw] top-[6vw] w-[36vw] md:w-[28vw] aspect-[3/4] z-[-1] reveal reveal-delay-2 img-hover">
               <Image
                 src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1000&q=80"
                 alt=""
@@ -136,13 +145,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* sub-block */}
-          <div className="mt-6 sm:mt-[6vw] md:mt-[3vw] grid grid-cols-12 gap-6 reveal reveal-delay-3 pb-24 sm:pb-0">
-            <div className="col-span-12 sm:col-span-8 md:col-span-4 md:col-start-2">
-              <p className="hidden sm:block text-sm tracking-[0.2em] uppercase text-cocoa/70 mb-4">
+          <div className="mt-[6vw] md:mt-[3vw] grid grid-cols-12 gap-6 reveal reveal-delay-3">
+            <div className="col-span-8 md:col-span-4 md:col-start-2">
+              <p className="text-sm tracking-[0.2em] uppercase text-cocoa/70 mb-4">
                 ✦ Interior Studio, since 2019
               </p>
-              <p className="font-display text-xl sm:text-2xl md:text-3xl leading-[1.2] text-cocoa max-w-[30ch]">
+              <p className="font-display text-2xl md:text-3xl leading-[1.2] text-cocoa max-w-[30ch]">
                 We design rooms the way poems are written —
                 <span className="italic text-terracotta"> deliberately,</span> and
                 with reverence for the space between.
@@ -151,10 +159,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* corner ornament */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-cocoa/50 reveal reveal-delay-4">
-          ↓
-        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-cocoa/50 reveal reveal-delay-4">↓</div>
       </section>
 
       {/* ───────────────────────── PROJECTS ───────────────────────── */}
