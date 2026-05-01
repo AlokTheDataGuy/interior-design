@@ -104,7 +104,7 @@ export default function Home() {
             ✦ Interior Studio, since 2019
           </p>
           <h1 className="font-display text-[19vw] leading-[0.85] tracking-[-0.04em] text-cream">
-            <span className="italic font-light">In</span><span className="italic font-light text-terracotta">Design</span>
+            <span className="italic font-light text-terracotta">In</span><span className="italic font-light">Design</span>
           </h1>
           <div className="mt-5 border-t border-cream/15 pt-4">
             <p className="text-sm text-cream/65 leading-relaxed max-w-[30ch]">
@@ -134,7 +134,9 @@ export default function Home() {
             <h1 className="font-display text-[15vw] md:text-[14vw] leading-[0.85] tracking-[-0.04em] text-ink reveal pl-[5vw] md:pl-[10vw]">
               <span className="inline-block -translate-y-[0.12em]">In</span><span className="italic font-light">D</span><span className="italic font-light text-terracotta">esign</span>
             </h1>
-            <div className="absolute right-0 md:right-[8vw] top-[6vw] w-[36vw] md:w-[28vw] aspect-[3/4] z-[-1] reveal reveal-delay-2 img-hover">
+
+            {/* Image — lifted to align with headline top */}
+            <div className="absolute right-0 md:right-[8vw] -top-[4vw] w-[36vw] md:w-[28vw] aspect-[3/4] z-[-1] reveal reveal-delay-2 img-hover">
               <Image
                 src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1000&q=80"
                 alt=""
@@ -172,7 +174,7 @@ export default function Home() {
             </span>
             <h2 className="font-display text-7xl md:text-9xl leading-[0.9] tracking-tight mt-4">
               Work,
-              <span className="italic font-light">
+              <span className="italic font-light text-terracotta">
                 {" "}
                 by <br />
                 discipline.
@@ -230,8 +232,8 @@ export default function Home() {
           <div className="col-span-12 md:col-span-6">
             <h2 className="font-display text-4xl md:text-5xl leading-[1.05] tracking-tight">
               The studio keeps a
-              <span className="italic"> small list</span> of clients,
-              <span className="text-terracotta"> on purpose.</span>
+              <span className="italic text-terracotta"> small list</span> of clients,
+              <span className=""> on purpose.</span>
             </h2>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-cocoa text-sm leading-relaxed">
               <p>
@@ -373,9 +375,9 @@ export default function Home() {
             <h2 className="font-display text-6xl md:text-[9rem] leading-[0.9] tracking-tight mt-4">
               Let's make
               <br />
-              <span className="italic font-light">something</span>
+              <span className="italic font-light text-terracotta">something</span>
               <br />
-              <span className="text-terracotta">slow.</span>
+              <span>slow.</span>
             </h2>
 
             <p className="mt-10 max-w-md text-cocoa leading-relaxed">
