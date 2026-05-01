@@ -1,4 +1,4 @@
-# Atelier Nord — Interior Design Studio
+# InDesign — Interior Design Studio
 
 Next.js 15 (App Router) + Tailwind CSS 3 + TypeScript.
 
